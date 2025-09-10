@@ -1,0 +1,18 @@
+.logo__mark {
+  width: 32px;
+  height: 32px;
+}
+
+@media (max-width: 768px) {
+  .logo__mark {
+    width: 32px;
+    height: 30.17px;
+  }
+}
+
+@media (max-width: 320px) {
+  .logo__mark {
+    width: 23.69px;
+    height: 23.77px;
+  }
+}
