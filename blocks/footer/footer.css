@@ -1,0 +1,39 @@
+/* ===== Footer ===== */
+
+/* Gap con la sección anterior (Intro) */
+.footer {
+  margin-top: 92px; /* Figma: 1968(top footer) − 1876(bottom intro) ≈ 92px */
+}
+
+/* Caja de 194 centrada; texto alineado a la derecha dentro de esa caja */
+.footer__copyright {
+  width: 194px; /* Figma: width 194 */
+  margin: 0 auto; /* centrado horizontal (left=543 en Figma confirma centrado) */
+  text-align: right; /* Figma: texto a la derecha dentro de la caja */
+  color: #ffffff; /* Figma: “background #FFF” en texto = color blanco */
+  font-family: Inter, Arial, sans-serif;
+  font-weight: 400; /* Figma: 400 */
+  font-size: 14px; /* Figma: 14px */
+  line-height: 16px; /* Figma: 16px → aquí sí en px porque es exacto y pequeño */
+  letter-spacing: 0; /* Figma: 0% */
+}
+
+@media (max-width: 1024px) {
+  .footer {
+    margin-top: 88px; /* intro → footer */
+  }
+  /* caja sigue centrada (194px), texto 14/16 */
+}
+
+@media (max-width: 544px) {
+  .footer {
+    margin-top: 64px;
+  }
+  .footer__copyright {
+    width: 194px;
+    margin: 0 auto;
+    text-align: center; /* en Figma está centrado en la caja */
+    font-size: 14px;
+    line-height: 14px;
+  }
+}

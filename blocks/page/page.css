@@ -1,0 +1,24 @@
+/* blocks/page/page.css */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Fondo + tipografía globales */
+
+.page {
+  background: #2a2c2f; /* fondo del frame 1280 */
+  color: #ffffff; /* color de texto global */
+  font-family: Inter, Arial, sans-serif; /* Inter + fallback */
+  min-height: 100vh; /* cubre toda la ventana */
+  margin: 0; /* quita margen por defecto del body */
+}
+
+/* Contenedor de contenido (columna de 984px centrada) */
+.page__container {
+  max-width: 984px; /* la columna que definiste desde Figma 1280 - 148 -148: 984px */
+  margin: 0 auto; /* sin margen que pueda mover nuestra dimencioón del contendor, centra horizontalmente */
+  padding: 0; /* sin padding lateral en 1280, nuestro contenido estara pegado al margen de la caja */
+}

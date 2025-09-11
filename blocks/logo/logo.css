@@ -1,18 +1,40 @@
+.logo {
+  display: flex; /* ancho = al del contenido (el texto) */
+  flex-direction: column; /* marca arriba, texto abajo */
+  align-items: center; /* centra la marca respecto al texto */
+  gap: 32px; /* espacio vertical exacto de Figma */
+  text-decoration: none; /* si es <a>, sin subrayado */
+  color: inherit; /* blanco heredado del body */
+  flex: 0 0 auto; /* no se estira dentro del header */
+}
+
 .logo__mark {
   width: 32px;
   height: 32px;
+  flex: 0 0 auto;
 }
 
-@media (max-width: 768px) {
-  .logo__mark {
-    width: 32px;
-    height: 30.17px;
+.logo__text {
+  display: block; /* el ancho del logo toma el del texto */
+  font-weight: 700; /* “grueso” tipo Figma */
+  font-size: 14px; /* 14px exactos */
+  line-height: 16px; /* 16px exactos */
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap; /* una sola línea */
+}
+
+@media (max-width: 544px) {
+  .logo {
+    gap: 12px;
   }
-}
-
-@media (max-width: 320px) {
   .logo__mark {
-    width: 23.69px;
-    height: 23.77px;
+    width: 24px;
+    height: 24px;
+  }
+  .logo__text {
+    font-size: 11px; /* ≈ alto de 11 px */
+    line-height: 12px;
+    letter-spacing: 0.06em; /* como desktop */
   }
 }

@@ -1,0 +1,114 @@
+.lead {
+  margin-top: 43.06px;
+}
+
+.lead__title {
+  max-width: 720px; /* caja de texto de Figma → controla el salto en 2 líneas */
+  margin: 0 auto;
+  font-family: Inter, Arial, sans-serif; /* listo */
+  font-weight: 900; /* Black */
+  font-size: 96px; /* Figma */
+  line-height: 1.0417; /* 100 / 96 → mejor práctica en decimal */
+  letter-spacing: 0; /* explícito: Figma 0% */
+  text-align: center;
+  color: #ffffff; /* “background” de Figma = color del texto */
+}
+
+.lead__subtitle {
+  /* Ancho y centrado */
+  max-width: 720px; /* Figma: width: 720 → control del salto de línea sin romper responsive */
+  margin: 32px auto 0; /* 32px = distancia H1 → subtítulo (426 - (194+200)) y centrado con auto */
+
+  /* Tipografía */
+  font-family: Inter, Arial, sans-serif; /* Figma: Inter */
+  font-weight: 400; /* Figma: font-weight 400 (Regular) */
+  font-size: 30px; /* Figma: 30px */
+  line-height: 1.2; /* Figma: 36px → 36/30 = 1.2 (decimal como pide el brief) */
+  letter-spacing: 0; /* Figma: 0% → en CSS, 0 */
+  text-align: center; /* Figma: centrado */
+  color: #ffffff; /* Figma: “background #FFF” en texto = color del texto */
+}
+
+/* Contenedor de la imagen: respeta el ratio de Figma */
+.lead__image {
+  margin-top: 64px; /* gap exacto con el subtítulo (562 - 498) */
+  aspect-ratio: 984 / 615; /* 984×615 del diseño */
+  position: relative; /* para el overlay (blend) */
+  isolation: isolate; /* el blending no “ensucia” fuera del figure */
+  overflow: hidden; /* por si hay recorte con object-fit */
+}
+
+/* La foto rellena sin deformarse (como en Figma) */
+.lead__image-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* recorta lo que sobre para mantener el encuadre */
+  object-position: 50% 45%; /* Ajuste fino del encuadre (empieza aquí y luego lo retocas en DevTools) */
+  filter: grayscale(
+    100%
+  ); /* BN simple equivalente visual al “Matiz” de Figma */
+}
+
+/* Responsive*/
+@media (max-width: 1024px) {
+  /* Título: 530px, 75/79 */
+  .lead__title {
+    max-width: 530px;
+    font-size: 75px;
+    line-height: 1.0533; /* 79/75 */
+    margin: 0 auto; /* centrado */
+  }
+
+  /* Gap título → subtítulo = 25px; subtítulo 30/36, ancho 720 */
+  .lead__subtitle {
+    max-width: 720px;
+    font-size: 30px;
+    line-height: 36px; /* 1.2 */
+    margin: 25px auto 0; /* gap exacto */
+    text-align: center;
+  }
+
+  /* Imagen: gap 30px, ratio 768/480, FULL-BLEED */
+  .lead__image {
+    margin: 30px 0 0; /* subtítulo → imagen */
+    aspect-ratio: 768 / 480; /* 1.6 (igual que desktop, pero lo dejamos explícito) */
+
+    /* full-bleed: extiende 24px a cada lado para anular el padding del contenedor */
+    width: calc(100% + 48px);
+    margin-left: -24px;
+    margin-right: -24px;
+  }
+}
+
+@media (max-width: 544px) {
+  /* separación respecto al header: 26px (≈ 122 – header) */
+  .lead {
+    margin-top: 26px;
+  }
+
+  .lead__title {
+    max-width: 228px;
+    margin: 0 auto;
+    font-size: 40px;
+    line-height: 44px; /* 44/40 */
+    text-align: center;
+  }
+
+  .lead__subtitle {
+    max-width: 288px;
+    margin: 16px auto 0; /* gap exacto con el título */
+    font-size: 16px;
+    line-height: 20px; /* 20/16 */
+    text-align: center;
+  }
+
+  /* imagen full-bleed con padding lateral de 16px */
+  .lead__image {
+    margin-top: 40px; /* gap subtítulo → imagen */
+    aspect-ratio: 320 / 200;
+    width: calc(100% + 32px);
+    margin-left: -16px;
+    margin-right: -16px;
+  }
+}

@@ -1,0 +1,148 @@
+/* ===== Intro ===== */
+
+/* Imagen(lead) bottom 1177 → Intro title top 1269 → gap 92px */
+.intro {
+  margin-top: 92px;
+  color: #ffffff; /* textos blancos en esta sección */
+}
+
+/* TÍTULO — width 830, Inter 900, 54/58, alineado a la izquierda */
+.intro__title {
+  max-width: 830px; /* Figma: width 830 */
+  margin: 0; /* alineado al borde izquierdo del contenedor */
+  font-family: Inter, Arial, sans-serif;
+  font-weight: 900; /* Black */
+  font-size: 54px; /* Figma: 54 */
+  line-height: 1.0741; /* 58 / 54 */
+  letter-spacing: 0;
+  text-align: left; /* Figma: alineado a la izquierda */
+}
+
+/* CITA — caja 738 de ancho, 24/34, gap con título 40px */
+.intro__quote {
+  max-width: 738px; /* Figma: width 738 para el párrafo de la cita */
+  margin: 40px 0 0; /* gap TÍTULO → CITA = 40px */
+}
+
+.intro__quote-text {
+  margin: 0 0 10px; /* gap CITA → AUTOR = 10px */
+  font-family: Inter, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 24px; /* Figma: 24 */
+  line-height: 1.4167; /* 34 / 24 */
+  letter-spacing: 0;
+  text-align: left; /* párrafo de la cita a la izquierda */
+}
+
+/* Autor — caja 732, 24/34, alineado a la derecha */
+.intro__quote-author {
+  display: block; /* para poder alinear y aplicar márgenes si hace falta */
+  max-width: 732px; /* Figma: width 732 */
+  text-align: right; /* Figma: autor a la derecha */
+  font-family: Inter, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 24px; /* Figma: 24 */
+  line-height: 1.4167; /* 34 / 24 */
+  letter-spacing: 0;
+  margin: 0; /* sin margen extra */
+}
+
+/* PÁRRAFO LARGO — caja 722, 16/163%, gap con autor 32px */
+.intro__text {
+  max-width: 722px; /* Figma: width 722 */
+  margin: 32px 0 0; /* gap AUTOR → PÁRRAFO LARGO = 32px */
+  font-family: Inter, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px; /* Figma: 16 */
+  line-height: 1.63; /* Figma: 163% → 1.63 */
+  letter-spacing: 0;
+  text-align: left;
+}
+
+/* ===== Responsivo (los ajustarás luego con 1024 y 544) ===== */
+@media (max-width: 1024px) {
+  /* Imagen → Intro = 90px */
+  .intro {
+    margin-top: 90px;
+  }
+
+  /* Título: 707px, 45/49 */
+  .intro__title {
+    max-width: 707px;
+    font-size: 45px;
+    line-height: 1.0889; /* 49/45 */
+    margin: 0; /* pegado al borde izquierdo de la columna */
+    text-align: left;
+  }
+
+  /* Cita (texto): 720px, 24/34, gap 50px */
+  .intro__quote {
+    max-width: 720px;
+    margin: 50px 0 0; /* título → cita */
+    text-align: left;
+  }
+  .intro__quote-text {
+    font-size: 24px;
+    line-height: 1.4167; /* 34/24 */
+    margin: 0 0 10px; /* cita → autor */
+  }
+
+  /* Autor: 720px, 24/34, alineado derecha, gap 10px ya aplicado arriba */
+  .intro__quote-author {
+    max-width: 720px;
+    font-size: 24px;
+    line-height: 1.4167;
+    margin: 0; /* se alinea por text-align */
+    text-align: right;
+  }
+
+  /* Párrafo largo: 720px, 16 / 1.63, gap 32px */
+  .intro__text {
+    max-width: 720px;
+    font-size: 16px;
+    line-height: 1.63;
+    margin: 32px 0 0; /* autor → párrafo */
+    text-align: left;
+  }
+}
+
+@media (max-width: 544px) {
+  .intro {
+    margin-top: 64px;
+  }
+
+  .intro__title {
+    max-width: 288px;
+    font-size: 32px;
+    line-height: 35px; /* 35/32 */
+    text-align: left;
+    margin: 0;
+  }
+
+  .intro__quote {
+    max-width: 288px;
+    margin: 40px 0 0; /* título → cita */
+    text-align: left;
+  }
+
+  .intro__quote-text {
+    font-size: 24px;
+    line-height: 30px; /* 30/24 */
+    margin: 0 0 10px; /* cita → autor */
+  }
+
+  .intro__quote-author {
+    max-width: 288px;
+    font-size: 24px;
+    line-height: 34px;
+    text-align: right;
+    margin: 0; /* se alinea por text-align */
+  }
+
+  .intro__text {
+    max-width: 288px;
+    margin: 32px 0 0; /* autor → párrafo */
+    font-size: 16px;
+    line-height: 1.63; /* 163% */
+  }
+}
