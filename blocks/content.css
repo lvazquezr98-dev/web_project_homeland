@@ -1,0 +1,6 @@
+/* Contenedor de contenido (columna de 984px centrada) */
+.content {
+  max-width: 984px; /* la columna que definiste desde Figma 1280 - 148 -148: 984px */
+  margin: 0 auto; /* sin margen que pueda mover nuestra dimencioón del contendor, centra horizontalmente */
+  padding: 0; /* sin padding lateral en 1280, nuestro contenido estara pegado al margen de la caja */
+}
