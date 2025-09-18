@@ -37,7 +37,7 @@
           </p>
           <figure class="lead__image">
             <img
-              src="./images/577c288cef13efac778de0a0f11756d6c6e745da (2).png"
+              src="./images/__image.jpg"
               alt="Vista panorámica costera en blanco y negro mostrando casas y
           colinas al fondo"
               class="lead__image-photo"
@@ -77,8 +77,14 @@
       </main>
       <!-- footer (copyright) -->
       <footer class="footer" role="contentinfo">
-        <p class="footer__copyright">© 2025. Luis Reyes</p>
+        <p class="footer__copyright">
+          &copy; <span id="year"></span> Luis Reyes
+        </p>
       </footer>
+      <script>
+        // Año automático
+        document.getElementById("year").textContent = new Date().getFullYear();
+      </script>
     </div>
   </body>
 </html>
