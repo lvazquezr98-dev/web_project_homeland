@@ -13,5 +13,5 @@
   color: #ffffff; /* color de texto global */
   font-family: Inter, Arial, sans-serif; /* Inter + fallback */
   min-height: 100vh; /* cubre toda la ventana */
-  margin: 0; /* quita margen por defecto del body */
+  margin: 0 auto; /* quita margen por defecto del body */
 }
