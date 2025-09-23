@@ -10,8 +10,10 @@
 
 .page {
   background: #2a2c2f; /* fondo del frame 1280 */
+  max-width: 1280px; /* ancho máximo del frame */
+  min-height: 320px; /* altura mínima del frame */
+  margin: 0 auto; /* quita margen por defecto del body */
   color: #ffffff; /* color de texto global */
   font-family: Inter, Arial, sans-serif; /* Inter + fallback */
   min-height: 100vh; /* cubre toda la ventana */
-  margin: 0 auto; /* quita margen por defecto del body */
 }

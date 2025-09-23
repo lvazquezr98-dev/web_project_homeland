@@ -1,0 +1,58 @@
+.place {
+  display: grid;
+  grid-template-columns: 460px 1fr;
+  grid-template-rows: auto auto 1fr;
+  grid-template-areas:
+    "title autor"
+    "img description"
+    "img description"
+    "button description";
+  gap: 20px;
+}
+.place__title {
+  grid-area: title;
+}
+
+.place__autor {
+  grid-area: autor;
+}
+
+.place__img {
+  grid-area: img;
+}
+
+.place__description {
+  grid-area: description;
+}
+
+.place__button {
+  grid-area: button;
+}
+
+@media screen and (max-width: 1024px) {
+  .place {
+    display: grid;
+    grid-template-columns: 460px 1fr;
+    grid-template-rows: auto auto 1fr;
+    gap: 20px;
+    grid-template-areas:
+      "title autor"
+      "img description"
+      "img description"
+      "button description";
+  }
+}
+@media screen and (max-width: 544px) {
+  .place {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 20px;
+    grid-template-areas:
+      "title"
+      "autor"
+      "img"
+      "description"
+      "button";
+  }
+}
