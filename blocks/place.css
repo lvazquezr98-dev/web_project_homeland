@@ -3,13 +3,12 @@
   grid-template-columns: 460px 1fr;
   grid-template-rows: auto auto 1fr;
   gap: 40px;
+  margin: 0 auto 80px auto;
+  max-width: 984px;
   grid-template-areas:
     "title autor"
     "img description"
-    "img description"
     "button description";
-  margin: 0 auto 80px auto;
-  max-width: 984px;
 }
 
 .place__title {
@@ -33,7 +32,11 @@
   margin: 0;
 }
 
-.place__img {
+.place__span {
+  display: block;
+}
+
+.place__image {
   grid-area: img;
   width: 100%;
   max-width: 460px;
@@ -57,7 +60,6 @@
 .place__button {
   grid-area: button;
   display: inline-block;
-  min-width: 289px; /* Nunca más pequeño que esto */
   padding: 13px 20px;
   border-radius: 4px;
   background: linear-gradient(90deg, #0278fe 0%, #003a7b 99.98%);
@@ -69,6 +71,8 @@
   text-decoration: none;
   text-align: center;
   gap: 10px;
+  width: max-content;
+  height: max-content;
 }
 
 @media screen and (max-width: 1024px) {
@@ -80,10 +84,23 @@
     grid-template-areas:
       "title autor"
       "img description"
-      "img description"
       "button description";
   }
 }
+
+@media screen and (max-width: 768px) {
+  .place {
+    grid-template-columns: 460px 1fr;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas:
+      "title autor"
+      "img description"
+      "button description";
+    max-width: 100%;
+    margin: 0 auto 50px auto;
+  }
+}
+
 @media screen and (max-width: 544px) {
   .place {
     display: grid;
