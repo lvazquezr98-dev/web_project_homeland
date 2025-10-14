@@ -105,13 +105,20 @@
   .place {
     display: grid;
     grid-template-columns: 1fr;
+    max-width: 100%;
     grid-template-rows: 1fr;
     gap: 20px;
+    padding: 0 16px;
+
     grid-template-areas:
       "title"
       "autor"
       "img"
       "description"
       "button";
+  }
+  .place__image {
+    max-width: 100%; /* Nunca más ancho que su contenedor */
+    width: 100%; /* Ocupa todo el ancho disponible */
   }
 }
