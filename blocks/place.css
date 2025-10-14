@@ -77,39 +77,20 @@
 
 @media screen and (max-width: 1024px) {
   .place {
-    display: grid;
-    grid-template-columns: 460px 1fr;
-    grid-template-rows: auto auto 1fr;
-    gap: 20px;
-    grid-template-areas:
-      "title autor"
-      "img description"
-      "button description";
+    grid-template-columns: 340px 1fr;
+    gap: 32px;
+    margin: 0 auto 70px auto;
+    padding: 0 24px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .place {
-    grid-template-columns: 460px 1fr;
-    grid-template-rows: auto auto 1fr;
-    grid-template-areas:
-      "title autor"
-      "img description"
-      "button description";
-    max-width: 100%;
-    margin: 0 auto 50px auto;
-  }
-}
-
-@media screen and (max-width: 544px) {
-  .place {
-    display: grid;
     grid-template-columns: 1fr;
+    gap: 32px;
     max-width: 100%;
-    grid-template-rows: 1fr;
-    gap: 20px;
-    padding: 0 16px;
-
+    padding: 0 24px;
+    margin: 0 auto 50px auto;
     grid-template-areas:
       "title"
       "autor"
@@ -117,8 +98,28 @@
       "description"
       "button";
   }
-  .place__image {
-    max-width: 100%; /* Nunca más ancho que su contenedor */
-    width: 100%; /* Ocupa todo el ancho disponible */
+
+  .place__title {
+    font-size: 42px;
+    line-height: 46px;
+  }
+}
+
+@media screen and (max-width: 544px) {
+  .place {
+    grid-template-columns: 1fr;
+    padding: 0 16px;
+    gap: 20px;
+    grid-template-areas:
+      "title"
+      "autor"
+      "img"
+      "description"
+      "button";
+  }
+
+  .place__title {
+    font-size: 32px;
+    line-height: 35px;
   }
 }
